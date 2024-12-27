@@ -1,0 +1,141 @@
+/* 通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px; /* 全局字體縮小 */
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 18px; /* 標題字體稍小 */
+}
+
+/* 新增任務區域 */
+#newTaskSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#newTaskName {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 220px;
+    margin-right: 8px;
+}
+
+#addTaskButton {
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTaskButton:hover {
+    background-color: #0056b3;
+}
+
+#addTaskButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 任務卡片樣式 */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    margin-bottom: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 13px; /* 卡片內部字體稍小 */
+}
+
+.task .task-details {
+    flex: 1; /* 左側占據剩餘空間 */
+}
+
+.task .task-controls {
+    display: flex;
+    flex-direction: column; /* 按鈕垂直排列 */
+    align-items: center; /* 按鈕居中對齊 */
+    gap: 5px; /* 按鈕之間的間距 */
+}
+
+/* 任務名稱輸入框樣式 */
+.task input[type="text"] {
+    width: 150px;
+    font-weight: bold;
+    border: none;
+    background-color: #f9f9f9;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.task input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #4caf50;
+    background-color: white;
+}
+
+.task span {
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+}
+
+/* 按鈕樣式 */
+.task button {
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    width: 80px; /* 統一按鈕寬度 */
+}
+
+.task button.start {
+    background-color: #4caf50;
+}
+
+.task button.start:hover {
+    background-color: #45a049;
+}
+
+.task button.stop {
+    background-color: #ff9800;
+}
+
+.task button.stop:hover {
+    background-color: #f57c00;
+}
+
+.task button.reset {
+    background-color: #2196f3;
+}
+
+.task button.reset:hover {
+    background-color: #1976d2;
+}
+
+.task button.delete {
+    background-color: #f44336;
+}
+
+.task button.delete:hover {
+    background-color: #d32f2f;
+}

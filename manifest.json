@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "多任務計時器",
+  "version": "1.0",
+  "description": "一個簡單的多任務計時器工具，直接在 Chrome 中使用。",
+  "permissions": ["storage", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
