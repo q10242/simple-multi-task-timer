@@ -8,9 +8,15 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-// 開始計時任務
-function startTask(index) {
+// 開始計時任務，同時支持更新任務名稱
+function startTask(index, taskName = null) {
     stopAllTasks(); // 確保只有一個任務在計時
+
+    if (taskName !== null && taskName.trim() !== "") {
+        // 更新任务名称
+        tasks[index].name = taskName.trim();
+    }
+
     tasks[index].running = true;
 
     // 使用 setInterval 增加計時
@@ -64,7 +70,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             addTask(taskName);
             break;
         case "startTask":
-            startTask(index);
+            startTask(index, taskName); // 確保開始任務時更新名稱
             break;
         case "stopTask":
             stopTask(index);
